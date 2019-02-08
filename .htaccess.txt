@@ -1,0 +1,9 @@
+#htaccess for api 
+RewriteEngine On
+RewriteRule ^([^/]+)/? api.php?url=$1 [L,QSA]
+
+RewriteEngine On
+#RewriteRule ^([^/]+)/? api.php?request=$1
+RewriteRule api/v1/(.*)$ api/v1/api.php?request=$1 [QSA,NC,L]
+#RewriteRule (.*)$ api.php?request=$1 [QSA,NC,L]
+
