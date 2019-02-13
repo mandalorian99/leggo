@@ -7,13 +7,17 @@ Class BusStopController extends controller{
 	# functin to retrieve bus stop latitude and longitude 
 	# used further by api to get data in json format
 	public function get_bus_stop_coords(){
-		header("Access-Control-Allow-Orgin: *");
-        header("Access-Control-Allow-Methods: *");
-        header("Content-Type: application/json");
+		#header("Access-Control-Allow-Orgin: *");
+        #header("Access-Control-Allow-Methods: *");
+        #header("Content-Type: application/json");
 
 		$coords = new BusStopsModel() ;
 		$data = $coords->get() ;
-		echo json_encode($data) ; 
+		/**
+		 * Creating view and supply data to it
+		 */
+
+		
 
 	}
 	# return json data to api endpoint 

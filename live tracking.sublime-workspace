@@ -4,6 +4,18 @@
 		"selected_items":
 		[
 			[
+				"func",
+				"funcName"
+			],
+			[
+				"controll",
+				"controllerName"
+			],
+			[
+				"ViewTest",
+				"ViewTestController"
+			],
+			[
 				"bus",
 				"bus_stop_name"
 			],
@@ -71,7 +83,7 @@
 			"file": "index.php",
 			"settings":
 			{
-				"buffer_size": 644,
+				"buffer_size": 829,
 				"encoding": "UTF-8",
 				"line_ending": "Windows",
 				"name": "in"
@@ -81,37 +93,52 @@
 			"file": "vendor/route/web.php",
 			"settings":
 			{
-				"buffer_size": 444,
+				"buffer_size": 696,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "api/v1/feeds.php",
+			"file": "vendor/app/controller/controller.php",
 			"settings":
 			{
-				"buffer_size": 1439,
+				"buffer_size": 256,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "vendor/app/view/bus_stop.blade.php",
+			"file": "vendor/app/controller/ViewTestController.php",
 			"settings":
 			{
-				"buffer_size": 4130,
+				"buffer_size": 298,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"contents": "<?php \n# controller to mark bus stop coordinates on the map \nrequire_once $_SERVER['DOCUMENT_ROOT'].'/live tracking/vendor/app/controller/controller.php' ;\nrequire_once  $_SERVER['DOCUMENT_ROOT'].'/live tracking/vendor/app/model/BusStopsModel.php' ;\n\nClass BusStopController extends controller{\n\t# functin to retrieve bus stop latitude and longitude \n\t# used further by api to get data in json format\n\tpublic function get_bus_stop_coords(){\n\t\t#header(\"Access-Control-Allow-Orgin: *\");\n        #header(\"Access-Control-Allow-Methods: *\");\n        #header(\"Content-Type: application/json\");\n\n\t\t$coords = new BusStopsModel() ;\n\t\t$data = $coords->get() ;\n\t\t/**\n\t\t * Creating view and supply data to it\n\t\t */\n\n\t\t\n\n\t}\n\t# return json data to api endpoint \n\tpublic function get_all_bus_stops_coords(){\n\t\t$coords = new BusStopsModel() ;\n\t\treturn $coords->get() ;\n\t\t\n\t}\n}\n?>",
-			"file": "vendor/app/controller/BusStopController.php",
-			"file_size": 857,
-			"file_write_time": 131940158440005731,
+			"file": "vendor/app/view/View.php",
 			"settings":
 			{
-				"buffer_size": 863,
+				"buffer_size": 386,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "vendor/app/view/ViewTestView.php",
+			"settings":
+			{
+				"buffer_size": 242,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "vendor/app/model/Model.php",
+			"settings":
+			{
+				"buffer_size": 559,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -122,8 +149,7 @@
 			{
 				"buffer_size": 430,
 				"encoding": "UTF-8",
-				"line_ending": "Windows",
-				"name": "<?php"
+				"line_ending": "Windows"
 			}
 		}
 	],
@@ -194,11 +220,30 @@
 		"/C/xampp/htdocs/live tracking",
 		"/C/xampp/htdocs/live tracking/vendor",
 		"/C/xampp/htdocs/live tracking/vendor/app",
-		"/C/xampp/htdocs/live tracking/vendor/app/controller",
-		"/C/xampp/htdocs/live tracking/vendor/app/view"
+		"/C/xampp/htdocs/live tracking/vendor/app/model",
+		"/C/xampp/htdocs/live tracking/vendor/app/view",
+		"/C/xampp/htdocs/live tracking/vendor/route"
 	],
 	"file_history":
 	[
+		"/C/xampp/htdocs/live tracking/vendor/route/Route.php",
+		"/C/xampp/htdocs/live tracking/vendor/app/view/ViewTest.blade.php",
+		"/C/xampp/htdocs/cms-comicsite/tania_mvc/laconia/src/app/routes.php",
+		"/C/xampp/htdocs/cms-comicsite/tania_mvc/laconia/public/index.php",
+		"/C/xampp/htdocs/live tracking/vendor/app/view/header.blade.php",
+		"/C/xampp/htdocs/live tracking/vendor/app/view/footer.blade.php",
+		"/C/xampp/htdocs/laravel projects/blogCms/app/Http/Controllers/CategoriesController.php",
+		"/C/xampp/htdocs/laravel projects/blogCms/vendor/laravel/framework/src/Illuminate/Contracts/Routing/ResponseFactory.php",
+		"/C/xampp/htdocs/laravel projects/blogCms/vendor/laravel/framework/src/Illuminate/Routing/ResponseFactory.php",
+		"/C/xampp/htdocs/cms-comicsite/basic mvc/controller/baseController.php",
+		"/C/xampp/htdocs/live tracking/vendor/app/view/View.php",
+		"/C/xampp/htdocs/live tracking/vendor/app/model/BusStopsModel.php",
+		"/C/xampp/htdocs/live tracking/vendor/app/controller/BusStopController.php",
+		"/C/xampp/htdocs/live tracking/vendor/app/view/bus_stop.blade.php",
+		"/C/xampp/htdocs/live tracking/vendor/app/view/ViewTest.blade.html",
+		"/C/xampp/htdocs/live tracking/vendor/app/controller/ViewTestController.php",
+		"/C/xampp/htdocs/live tracking/api/v1/feeds.php",
+		"/C/xampp/htdocs/laravel projects/blogCms/app/Http/Controllers/Controller.php",
 		"/C/xampp/htdocs/live tracking/api/v1/core.php",
 		"/C/xampp/htdocs/live tracking/vendor/app/model/Model.php",
 		"/C/xampp/htdocs/live tracking/vendor/database/Database.php",
@@ -206,10 +251,8 @@
 		"/C/xampp/htdocs/cms-comicsite/tania_mvc/laconia/src/models/Database.php",
 		"/C/xampp/htdocs/live tracking/vendor/config/credentials.php",
 		"/C/xampp/htdocs/live tracking/api/v1/ApiKey.auth.php",
-		"/C/xampp/htdocs/live tracking/api/v1/feeds.php",
 		"/C/xampp/htdocs/live tracking/api/v1/api.php",
 		"/C/xampp/htdocs/live tracking/osm_api.html",
-		"/C/xampp/htdocs/live tracking/vendor/app/view/bus_stop.blade.php",
 		"/C/xampp/htdocs/cms-comicsite/ch 13 building a cms/api/v1/api.php",
 		"/C/xampp/htdocs/cms-comicsite/ch 13 building a cms/api/v1/API.class.php",
 		"/C/xampp/htdocs/cms-comicsite/ch 13 building a cms/api/v1/MYAPI.class.php",
@@ -218,10 +261,7 @@
 		"/C/xampp/htdocs/live tracking/.htaccess.txt",
 		"/D/codes backup/wp plugins and themes/Halloween1/Halloween.php",
 		"/C/xampp/htdocs/live tracking/vendor/app/view/index.blade.php",
-		"/C/xampp/htdocs/live tracking/vendor/route/Route.php",
 		"/C/xampp/htdocs/live tracking/vendor/app/view/functions.js",
-		"/C/xampp/htdocs/live tracking/vendor/app/controller/BusStopController.php",
-		"/C/xampp/htdocs/cms-comicsite/basic mvc/controller/baseController.php",
 		"/C/xampp/htdocs/live tracking/static/js/functions.js",
 		"/C/xampp/htdocs/live tracking/vendor/app/controller/adminController.php",
 		"/C/xampp/htdocs/live tracking/vendor/app/view/admin.blade.php",
@@ -231,11 +271,9 @@
 		"/C/xampp/htdocs/cms-comicsite/basic mvc/classes/Route.php",
 		"/C/xampp/htdocs/cms-comicsite/basic mvc/Routes.php",
 		"/C/xampp/htdocs/cms-comicsite/tania_mvc/laconia/src/models/Model.php",
-		"/C/xampp/htdocs/cms-comicsite/tania_mvc/laconia/src/app/routes.php",
 		"/C/xampp/htdocs/live tracking/vendor/route/router.php",
 		"/C/xampp/htdocs/live tracking/index.html",
 		"/C/xampp/htdocs/cms-comicsite/tania_mvc/laconia/src/app/Router.php",
-		"/C/xampp/htdocs/cms-comicsite/tania_mvc/laconia/public/index.php",
 		"/C/xampp/htdocs/live tracking/dependencies/tileserver-php/tileserver.php",
 		"/C/xampp/htdocs/cms-comicsite/tania_mvc/laconia/config/constants.php",
 		"/C/xampp/htdocs/laravel projects/todo-list/config/database.php",
@@ -274,13 +312,14 @@
 	],
 	"find":
 	{
-		"height": 0.0
+		"height": 32.0
 	},
 	"find_in_files":
 	{
-		"height": 0.0,
+		"height": 116.0,
 		"where_history":
 		[
+			""
 		]
 	},
 	"find_state":
@@ -288,6 +327,9 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"function view(",
+			"view",
+			"BaseController"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -305,7 +347,7 @@
 	"groups":
 	[
 		{
-			"selected": 3,
+			"selected": 7,
 			"sheets":
 			[
 				{
@@ -314,15 +356,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 644,
+						"buffer_size": 829,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								566,
-								566
+								457,
+								457
 							]
 						],
 						"settings":
@@ -334,10 +376,10 @@
 							"syntax": "Packages/PHP/PHP.sublime-syntax"
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 138.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 5,
+					"stack_index": 7,
 					"type": "text"
 				},
 				{
@@ -346,15 +388,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 444,
+						"buffer_size": 696,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								425,
-								425
+								294,
+								299
 							]
 						],
 						"settings":
@@ -371,115 +413,166 @@
 							"syntax": "Packages/PHP/PHP.sublime-syntax"
 						},
 						"translation.x": 0.0,
-						"translation.y": 138.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "vendor/app/controller/controller.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 256,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								151,
+								151
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "vendor/app/controller/ViewTestController.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 298,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								289,
+								289
+							]
+						],
+						"settings":
+						{
+							"SL.16.region_keys":
+							[
+							],
+							"SL.25.region_keys":
+							[
+							],
+							"syntax": "Packages/PHP/PHP.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "vendor/app/view/View.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 386,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								271,
+								284
+							]
+						],
+						"settings":
+						{
+							"SL.39.region_keys":
+							[
+							],
+							"syntax": "Packages/PHP/PHP.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 3,
 					"type": "text"
 				},
 				{
-					"buffer": 2,
-					"file": "api/v1/feeds.php",
+					"buffer": 5,
+					"file": "vendor/app/view/ViewTestView.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1439,
+						"buffer_size": 242,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1363,
-								1363
+								104,
+								116
 							]
 						],
 						"settings":
 						{
-							"SL.15.region_keys":
-							[
-							],
-							"syntax": "Packages/PHP/PHP.sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 1173.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "vendor/app/view/bus_stop.blade.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 4130,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								788,
-								788
-							]
-						],
-						"settings":
-						{
-							"SL.30.region_keys":
-							[
-							],
 							"syntax": "Packages/PHP/PHP.sublime-syntax"
 						},
 						"translation.x": 0.0,
-						"translation.y": 326.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "vendor/app/controller/BusStopController.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 863,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								703,
-								703
-							]
-						],
-						"settings":
-						{
-							"SL.15.region_keys":
-							[
-							],
-							"SL.16.region_keys":
-							[
-							],
-							"SL.32.region_keys":
-							[
-							],
-							"syntax": "Packages/PHP/PHP.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 69.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 2,
 					"type": "text"
 				},
 				{
-					"buffer": 5,
+					"buffer": 6,
+					"file": "vendor/app/model/Model.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 559,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								402,
+								402
+							]
+						],
+						"settings":
+						{
+							"SL.42.region_keys":
+							[
+							],
+							"syntax": "Packages/PHP/PHP.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
 					"file": "vendor/app/model/BusStopsModel.php",
 					"semi_transient": false,
 					"settings":
@@ -491,26 +584,19 @@
 						"selection":
 						[
 							[
-								406,
-								406
+								238,
+								238
 							]
 						],
 						"settings":
 						{
-							"SL.17.region_keys":
-							[
-							],
-							"SL.25.region_keys":
-							[
-							],
-							"auto_name": "<?php",
 							"syntax": "Packages/PHP/PHP.sublime-syntax"
 						},
 						"translation.x": 0.0,
-						"translation.y": 69.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
+					"stack_index": 0,
 					"type": "text"
 				}
 			]
@@ -518,11 +604,11 @@
 	],
 	"incremental_find":
 	{
-		"height": 0.0
+		"height": 32.0
 	},
 	"input":
 	{
-		"height": 41.0
+		"height": 44.0
 	},
 	"layout":
 	{
@@ -559,7 +645,7 @@
 	"project": "live tracking.sublime-project",
 	"replace":
 	{
-		"height": 0.0
+		"height": 60.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -597,7 +683,7 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 264.0,
+	"side_bar_width": 262.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

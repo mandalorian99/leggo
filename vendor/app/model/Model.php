@@ -14,9 +14,10 @@ require $_SERVER['DOCUMENT_ROOT'].'/live tracking/vendor/database/Database.php' 
 abstract class Model{
 
 	protected $db ;
+	public  $test ="mango" ;
 
 	public function __construct(){
-		#echo 'parent: creating a db handler for you....';
+		echo 'parent: creating a db handler for you....';
 		$this->db = new Database() ;
 	}
 }
