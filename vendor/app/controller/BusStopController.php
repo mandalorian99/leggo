@@ -4,6 +4,15 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/live tracking/vendor/app/controller/con
 require_once  $_SERVER['DOCUMENT_ROOT'].'/live tracking/vendor/app/model/BusStopsModel.php' ;
 
 Class BusStopController extends controller{
+	public $view ;
+
+	# Call view template for stops route
+	public function index(){
+		# intiate view intance to evoke template/view
+		$this->view = new BusStopView ;
+		# this display the template
+		$this->view->output() ;
+	}
 	# functin to retrieve bus stop latitude and longitude 
 	# used further by api to get data in json format
 	public function get_bus_stop_coords(){

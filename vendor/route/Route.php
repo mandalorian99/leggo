@@ -13,7 +13,6 @@ class Route{
  	}
 
  	public static function set( $route , $function ){
-
  		self::$validRoute[] = $route ;
  		//echo '<br/>incoming url = '.$_GET['url'] ;
  		#print_r(self::$validRoute) ;
@@ -30,8 +29,10 @@ class Route{
  	}//EOF
 
  	public static function get($uri , $params){
+ 		
+
  		list($controllerName , $funcName) = explode('@', $params) ;
- 		self::$validRoute[] = $uri ;
+ 		self::$validRoute[] = $uri ; 		
 
  		if( $_GET['url'] == $uri){
  			$controller = new $controllerName ;
@@ -39,10 +40,8 @@ class Route{
  			$controller->$funcName() ;	
 
  			return ;
- 		}else{
- 			throw new Exception("no uri found", 1);
- 			
  		}
+ 		
  	}
 
  	public function test(){

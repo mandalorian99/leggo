@@ -4,6 +4,22 @@
 		"selected_items":
 		[
 			[
+				"Input",
+				"InputArgument"
+			],
+			[
+				"tem",
+				"template_name"
+			],
+			[
+				"template",
+				"template_dir"
+			],
+			[
+				"table",
+				"table_name"
+			],
+			[
 				"func",
 				"funcName"
 			],
@@ -93,63 +109,37 @@
 			"file": "vendor/route/web.php",
 			"settings":
 			{
-				"buffer_size": 696,
+				"buffer_size": 935,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "vendor/app/controller/controller.php",
+			"file": "vendor/app/controller/BusStopController.php",
 			"settings":
 			{
-				"buffer_size": 256,
+				"buffer_size": 1085,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "vendor/app/controller/ViewTestController.php",
+			"file": "templates/bus_stop.blade.php",
 			"settings":
 			{
-				"buffer_size": 298,
+				"buffer_size": 4157,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "vendor/app/view/View.php",
+			"file": "vendor/app/view/BusStopView.php",
 			"settings":
 			{
-				"buffer_size": 386,
+				"buffer_size": 553,
 				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "vendor/app/view/ViewTestView.php",
-			"settings":
-			{
-				"buffer_size": 242,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "vendor/app/model/Model.php",
-			"settings":
-			{
-				"buffer_size": 559,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "vendor/app/model/BusStopsModel.php",
-			"settings":
-			{
-				"buffer_size": 430,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
+				"line_ending": "Windows",
+				"name": "<?php"
 			}
 		}
 	],
@@ -217,17 +207,33 @@
 	},
 	"expanded_folders":
 	[
-		"/C/xampp/htdocs/live tracking",
-		"/C/xampp/htdocs/live tracking/vendor",
-		"/C/xampp/htdocs/live tracking/vendor/app",
-		"/C/xampp/htdocs/live tracking/vendor/app/model",
-		"/C/xampp/htdocs/live tracking/vendor/app/view",
-		"/C/xampp/htdocs/live tracking/vendor/route"
+		"/C/xampp/htdocs/symfony console app",
+		"/C/xampp/htdocs/symfony console app/php-console-app-using-symfony",
+		"/C/xampp/htdocs/symfony console app/php-console-app-using-symfony/src",
+		"/C/xampp/htdocs/symfony console app/php-console-app-using-symfony/vendor"
 	],
 	"file_history":
 	[
+		"/C/xampp/htdocs/symfony console app/php-console-app-using-symfony/src/MakeCommand.php",
+		"/C/xampp/htdocs/symfony console app/php-console-app-using-symfony/src/TimeCommand.php",
+		"/C/xampp/htdocs/symfony console app/php-console-app-using-symfony/src/Command.php",
+		"/C/xampp/htdocs/symfony console app/php-console-app-using-symfony/console",
+		"/C/xampp/htdocs/live tracking/templates/index.blade.php",
+		"/C/xampp/htdocs/live tracking/vendor/app/view/AdminView.php",
+		"/C/xampp/htdocs/live tracking/vendor/app/controller/AdminController.php",
+		"/C/xampp/htdocs/live tracking/vendor/app/controller/HomeController.php",
+		"/C/xampp/htdocs/live tracking/vendor/app/view/View.php",
+		"/C/xampp/htdocs/live tracking/vendor/app/view/IndexView.php",
 		"/C/xampp/htdocs/live tracking/vendor/route/Route.php",
+		"/C/xampp/htdocs/live tracking/vendor/app/controller/IndexController.php",
+		"/C/xampp/htdocs/live tracking/vendor/app/view/HomeView.php",
+		"/C/xampp/htdocs/live tracking/vendor/app/controller/controller.php",
+		"/C/xampp/htdocs/live tracking/vendor/app/view/ViewTestView.php",
+		"/C/xampp/htdocs/live tracking/vendor/app/controller/ViewTestController.php",
 		"/C/xampp/htdocs/live tracking/vendor/app/view/ViewTest.blade.php",
+		"/C/xampp/htdocs/live tracking/vendor/app/model/ViewTestModel.php",
+		"/C/xampp/htdocs/live tracking/vendor/app/model/Model.php",
+		"/C/xampp/htdocs/live tracking/vendor/app/model/BusStopsModel.php",
 		"/C/xampp/htdocs/cms-comicsite/tania_mvc/laconia/src/app/routes.php",
 		"/C/xampp/htdocs/cms-comicsite/tania_mvc/laconia/public/index.php",
 		"/C/xampp/htdocs/live tracking/vendor/app/view/header.blade.php",
@@ -236,18 +242,13 @@
 		"/C/xampp/htdocs/laravel projects/blogCms/vendor/laravel/framework/src/Illuminate/Contracts/Routing/ResponseFactory.php",
 		"/C/xampp/htdocs/laravel projects/blogCms/vendor/laravel/framework/src/Illuminate/Routing/ResponseFactory.php",
 		"/C/xampp/htdocs/cms-comicsite/basic mvc/controller/baseController.php",
-		"/C/xampp/htdocs/live tracking/vendor/app/view/View.php",
-		"/C/xampp/htdocs/live tracking/vendor/app/model/BusStopsModel.php",
 		"/C/xampp/htdocs/live tracking/vendor/app/controller/BusStopController.php",
 		"/C/xampp/htdocs/live tracking/vendor/app/view/bus_stop.blade.php",
 		"/C/xampp/htdocs/live tracking/vendor/app/view/ViewTest.blade.html",
-		"/C/xampp/htdocs/live tracking/vendor/app/controller/ViewTestController.php",
 		"/C/xampp/htdocs/live tracking/api/v1/feeds.php",
 		"/C/xampp/htdocs/laravel projects/blogCms/app/Http/Controllers/Controller.php",
 		"/C/xampp/htdocs/live tracking/api/v1/core.php",
-		"/C/xampp/htdocs/live tracking/vendor/app/model/Model.php",
 		"/C/xampp/htdocs/live tracking/vendor/database/Database.php",
-		"/C/xampp/htdocs/live tracking/vendor/app/controller/controller.php",
 		"/C/xampp/htdocs/cms-comicsite/tania_mvc/laconia/src/models/Database.php",
 		"/C/xampp/htdocs/live tracking/vendor/config/credentials.php",
 		"/C/xampp/htdocs/live tracking/api/v1/ApiKey.auth.php",
@@ -347,7 +348,7 @@
 	"groups":
 	[
 		{
-			"selected": 7,
+			"selected": 4,
 			"sheets":
 			[
 				{
@@ -376,10 +377,10 @@
 							"syntax": "Packages/PHP/PHP.sublime-syntax"
 						},
 						"translation.x": 0.0,
-						"translation.y": 138.0,
+						"translation.y": 161.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 7,
+					"stack_index": 4,
 					"type": "text"
 				},
 				{
@@ -388,15 +389,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 696,
+						"buffer_size": 935,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								294,
-								299
+								439,
+								439
 							]
 						],
 						"settings":
@@ -413,187 +414,96 @@
 							"syntax": "Packages/PHP/PHP.sublime-syntax"
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 6,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "vendor/app/controller/controller.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 256,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								151,
-								151
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 5,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "vendor/app/controller/ViewTestController.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 298,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								289,
-								289
-							]
-						],
-						"settings":
-						{
-							"SL.16.region_keys":
-							[
-							],
-							"SL.25.region_keys":
-							[
-							],
-							"syntax": "Packages/PHP/PHP.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 4,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "vendor/app/view/View.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 386,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								271,
-								284
-							]
-						],
-						"settings":
-						{
-							"SL.39.region_keys":
-							[
-							],
-							"syntax": "Packages/PHP/PHP.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 276.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 3,
 					"type": "text"
 				},
 				{
-					"buffer": 5,
-					"file": "vendor/app/view/ViewTestView.php",
+					"buffer": 2,
+					"file": "vendor/app/controller/BusStopController.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 242,
+						"buffer_size": 1085,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								104,
-								116
+								451,
+								451
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/PHP/PHP.sublime-syntax"
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 69.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 2,
 					"type": "text"
 				},
 				{
-					"buffer": 6,
-					"file": "vendor/app/model/Model.php",
+					"buffer": 3,
+					"file": "templates/bus_stop.blade.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 559,
+						"buffer_size": 4157,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								402,
-								402
+								23,
+								23
 							]
 						],
 						"settings":
 						{
-							"SL.42.region_keys":
-							[
-							],
 							"syntax": "Packages/PHP/PHP.sublime-syntax"
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 2231.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 1,
 					"type": "text"
 				},
 				{
-					"buffer": 7,
-					"file": "vendor/app/model/BusStopsModel.php",
+					"buffer": 4,
+					"file": "vendor/app/view/BusStopView.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 430,
+						"buffer_size": 553,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								238,
-								238
+								327,
+								327
 							]
 						],
 						"settings":
 						{
+							"SL.21.region_keys":
+							[
+							],
+							"auto_name": "<?php",
 							"syntax": "Packages/PHP/PHP.sublime-syntax"
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 138.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
@@ -683,7 +593,7 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 262.0,
+	"side_bar_width": 331.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

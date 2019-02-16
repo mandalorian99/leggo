@@ -7,7 +7,7 @@ class ViewTestController extends controller{
 	public function index(){
 		# initilizing view to work with view class
 		$this->view = new ViewTestView ;
-		$this->view->render() ;
+		#$this->view->render() ;
 		$this->view->output() ;
 
 	}

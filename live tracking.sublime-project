@@ -15,6 +15,9 @@
 		},
 		{
 			"path": "C:\\xampp\\htdocs\\laravel projects\\blogCms"
+		},
+		{
+			"path": "C:\\xampp\\htdocs\\symfony console app"
 		}
 	]
 }

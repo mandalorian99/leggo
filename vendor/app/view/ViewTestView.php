@@ -5,11 +5,20 @@
  */
 
 class ViewTestView extends View{
- private $template_name = 'viewTest.blade.php' ;
 
- public function output(){
- 	echo 'child evoked..' ;
- }
+ 	public $template_name = 'viewTest.blade' ;
+ 	public $data ;
+
+ 	public function __construct(){
+ 		// intilizing viewtestmodel 
+ 		$this->model = new ViewTestModel ; 		
+ 	}
+
+ 	public function output(){
+ 		$this->data = $this->model->get_test_data() ;
+ 		$this->render($this->template_name , $this->data) ;
+ 	}
 
 }
+
 ?>
