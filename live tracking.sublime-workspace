@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"YOUR_",
+				"YOUR_TABLE_COLUMN_NAME"
+			],
+			[
 				"str_rep",
 				"str_replace"
 			],
@@ -123,49 +127,29 @@
 			}
 		},
 		{
-			"file": "vendor/console/console",
-			"settings":
-			{
-				"buffer_size": 647,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "vendor/console/src/Command.php",
-			"settings":
-			{
-				"buffer_size": 4697,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
 			"file": "vendor/console/src/MakeCommand.php",
 			"settings":
 			{
-				"buffer_size": 2534,
+				"buffer_size": 2761,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "vendor/database/Migration.php",
+			"file": "vendor/dependencies/faker/faker_test.php",
 			"settings":
 			{
-				"buffer_size": 339,
+				"buffer_size": 599,
 				"encoding": "UTF-8",
-				"line_ending": "Windows"
+				"line_ending": "Windows",
+				"name": "<?php"
 			}
 		},
 		{
-			"contents": "<?php \n$vendorDir = dirname(dirname(__FILE__));\n$baseDir = dirname($vendorDir);\n\n$path = str_replace(\"\\\\\", \"/\" , $baseDir) ;\n$path .='/vendor/database/Migration.php' ;\n\nrequire $path ;\n\nuse database\\migration\\Migration as Migration ;\n\n//migation template\nclass CreateTagTable extends Migration{\n\tpublic $table_name = 'tags' ;\n\n\tpublic function up(){\n\t\t#code goes here...\n\t\t$this->create($this->table_name , function(){\n\t\t\t#$table->addColumn('coloumn name' , array() );\n\t\t\techo 'function evoked...' ;\n\t\t});\n\t}\n\n\tpublic function down(){\n\t\t#code goes here...\n\t}\n}\n\n?>",
-			"file": "vendor/migrations/CreateTagTable.php",
-			"file_size": 590,
-			"file_write_time": 131953245586424376,
+			"file": "vendor/dependencies/faker/fzaninotto/faker/src/Faker/Provider/book.php",
 			"settings":
 			{
-				"buffer_size": 564,
+				"buffer_size": 309,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -242,20 +226,49 @@
 	[
 		"/C/xampp/htdocs/live tracking",
 		"/C/xampp/htdocs/live tracking/vendor",
+		"/C/xampp/htdocs/live tracking/vendor/app",
+		"/C/xampp/htdocs/live tracking/vendor/app/controller",
+		"/C/xampp/htdocs/live tracking/vendor/app/model",
+		"/C/xampp/htdocs/live tracking/vendor/app/view",
+		"/C/xampp/htdocs/live tracking/vendor/console",
 		"/C/xampp/htdocs/live tracking/vendor/database",
-		"/C/xampp/htdocs/live tracking/vendor/migrations"
+		"/C/xampp/htdocs/live tracking/vendor/dependencies",
+		"/C/xampp/htdocs/live tracking/vendor/dependencies/faker",
+		"/C/xampp/htdocs/live tracking/vendor/dependencies/faker/fzaninotto",
+		"/C/xampp/htdocs/live tracking/vendor/dependencies/faker/fzaninotto/faker",
+		"/C/xampp/htdocs/live tracking/vendor/dependencies/faker/fzaninotto/faker/src",
+		"/C/xampp/htdocs/live tracking/vendor/dependencies/faker/fzaninotto/faker/src/Faker",
+		"/C/xampp/htdocs/live tracking/vendor/dependencies/faker/fzaninotto/faker/src/Faker/Provider"
 	],
 	"file_history":
 	[
+		"/C/xampp/htdocs/live tracking/vendor/database/Migration.php",
+		"/C/xampp/htdocs/live tracking/vendor/migrations/createTestTable.php",
+		"/C/xampp/htdocs/laravel projects/todo-list/database/factories/ToDoFactory.php",
+		"/C/xampp/htdocs/laravel projects/todo-list/database/seeds/DatabaseSeeder.php",
+		"/C/xampp/htdocs/laravel projects/todo-list/database/seeds/ToDOsTableSeeder.php",
+		"/C/xampp/htdocs/live tracking/vendor/database/Database.php",
+		"/C/xampp/htdocs/live tracking/vendor/app/model/Model.php",
+		"/C/xampp/htdocs/live tracking/vendor/console/src/Command.php",
+		"/C/xampp/htdocs/fzaninto faker code/vendor/index.php",
+		"/C/xampp/htdocs/fzaninto faker code/vendor/composer/ClassLoader.php",
+		"/C/xampp/htdocs/fzaninto faker code/vendor/composer/autoload_namespaces.php",
+		"/C/xampp/htdocs/fzaninto faker code/autoload.php",
+		"/C/xampp/htdocs/fzaninto faker code/composer/autoload_real.php",
+		"/C/xampp/htdocs/fzaninto faker code/composer.lock",
+		"/C/xampp/htdocs/live tracking/vendor/New folder/composer.lock",
+		"/C/xampp/htdocs/live tracking/vendor/migrations/createTest2Table.php",
+		"/C/xampp/htdocs/live tracking/vendor/console/console",
+		"/C/xampp/htdocs/live tracking/vendor/console/src/Migrate.php",
+		"/C/xampp/htdocs/live tracking/vendor/console/src/migration.php",
+		"/C/xampp/htdocs/live tracking/vendor/migrations/comments.php",
+		"/C/xampp/htdocs/live tracking/vendor/console/src/MakeCommand.php",
+		"/C/xampp/htdocs/live tracking/vendor/migrations/CreateTagTable.php",
+		"/C/xampp/htdocs/live tracking/vendor/migrations/createCommentsTable.php",
 		"/C/xampp/htdocs/live tracking/vendor/console/vendor/composer/autoload_classmap.php",
 		"/C/xampp/htdocs/live tracking/vendor/console/vendor/composer/autoload_namespaces.php",
-		"/C/xampp/htdocs/live tracking/vendor/console/src/Migrate.php",
-		"/C/xampp/htdocs/live tracking/vendor/database/Migration.php",
-		"/C/xampp/htdocs/live tracking/vendor/migrations/CreateTagTable.php",
 		"/C/xampp/htdocs/live tracking/vendor/console/src/MakeMigration.php",
-		"/C/xampp/htdocs/live tracking/vendor/console/src/MakeCommand.php",
 		"/C/xampp/htdocs/live tracking/vendor/console/src/MakeModel.php",
-		"/C/xampp/htdocs/live tracking/vendor/console/src/migration.php",
 		"/C/xampp/htdocs/live tracking/vendor/console/src/MakeMigrations.php",
 		"/C/xampp/htdocs/live tracking/vendor/console/src/TimeCommand.php",
 		"/C/xampp/htdocs/live tracking/vendor/console/src/test.php",
@@ -289,7 +302,6 @@
 		"/C/xampp/htdocs/live tracking/vendor/app/controller/ViewTestController.php",
 		"/C/xampp/htdocs/live tracking/vendor/app/view/ViewTest.blade.php",
 		"/C/xampp/htdocs/live tracking/vendor/app/model/ViewTestModel.php",
-		"/C/xampp/htdocs/live tracking/vendor/app/model/Model.php",
 		"/C/xampp/htdocs/live tracking/vendor/app/model/BusStopsModel.php",
 		"/C/xampp/htdocs/cms-comicsite/tania_mvc/laconia/src/app/routes.php",
 		"/C/xampp/htdocs/cms-comicsite/tania_mvc/laconia/public/index.php",
@@ -304,7 +316,6 @@
 		"/C/xampp/htdocs/live tracking/api/v1/feeds.php",
 		"/C/xampp/htdocs/laravel projects/blogCms/app/Http/Controllers/Controller.php",
 		"/C/xampp/htdocs/live tracking/api/v1/core.php",
-		"/C/xampp/htdocs/live tracking/vendor/database/Database.php",
 		"/C/xampp/htdocs/cms-comicsite/tania_mvc/laconia/src/models/Database.php",
 		"/C/xampp/htdocs/live tracking/vendor/config/credentials.php",
 		"/C/xampp/htdocs/live tracking/api/v1/ApiKey.auth.php",
@@ -358,18 +369,11 @@
 		"/D/django/hello_world/hello/views.py",
 		"/D/django/blog/source/templates/home.html",
 		"/C/Users/anoymous/AppData/Roaming/Sublime Text 3/Packages/User/Default (Windows).sublime-keymap",
-		"/C/Users/anoymous/AppData/Roaming/Sublime Text 3/Packages/Djaneiro/Settings/Python (Django).sublime-settings",
-		"/C/Users/anoymous/AppData/Roaming/Sublime Text 3/Packages/Pylinter/Pylinter.sublime-settings",
-		"/C/xampp/htdocs/cms-comicsite/basic mvc/index.php",
-		"/G/htdocs/projects .php",
-		"/C/xampp/htdocs/cms-comicsite/ch 13 building a cms/api/v1/classes/article.class.php",
-		"/C/xampp/htdocs/index.php",
-		"/C/xampp/htdocs/index .php",
-		"/G/htdocs/index .php"
+		"/C/Users/anoymous/AppData/Roaming/Sublime Text 3/Packages/Djaneiro/Settings/Python (Django).sublime-settings"
 	],
 	"find":
 	{
-		"height": 33.0
+		"height": 32.0
 	},
 	"find_in_files":
 	{
@@ -384,6 +388,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			";\n",
 			"function view(",
 			"view",
 			"BaseController"
@@ -404,7 +409,7 @@
 	"groups":
 	[
 		{
-			"selected": 6,
+			"selected": 4,
 			"sheets":
 			[
 				{
@@ -420,8 +425,8 @@
 						"selection":
 						[
 							[
-								457,
-								457
+								656,
+								656
 							]
 						],
 						"settings":
@@ -433,10 +438,10 @@
 							"syntax": "Packages/PHP/PHP.sublime-syntax"
 						},
 						"translation.x": 0.0,
-						"translation.y": 161.0,
+						"translation.y": 129.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 6,
+					"stack_index": 4,
 					"type": "text"
 				},
 				{
@@ -470,170 +475,98 @@
 							"syntax": "Packages/PHP/PHP.sublime-syntax"
 						},
 						"translation.x": 0.0,
-						"translation.y": 161.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 5,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "vendor/console/console",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 647,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								194,
-								194
-							]
-						],
-						"settings":
-						{
-							"SL.22.region_keys":
-							[
-							],
-							"syntax": "Packages/PHP/PHP.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 207.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 4,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "vendor/console/src/Command.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 4697,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								4530,
-								4530
-							]
-						],
-						"settings":
-						{
-							"SL.16.region_keys":
-							[
-							],
-							"SL.20.region_keys":
-							[
-							],
-							"syntax": "Packages/PHP/PHP.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 2967.0,
+						"translation.y": 828.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 3,
 					"type": "text"
 				},
 				{
-					"buffer": 4,
+					"buffer": 2,
 					"file": "vendor/console/src/MakeCommand.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2534,
+						"buffer_size": 2761,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2484,
-								2484
+								1725,
+								1725
 							]
 						],
 						"settings":
 						{
-							"SL.38.region_keys":
-							[
-							],
 							"syntax": "Packages/PHP/PHP.sublime-syntax",
 							"tab_size": 4,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 1656.0,
+						"translation.y": 1081.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 2,
 					"type": "text"
 				},
 				{
-					"buffer": 5,
-					"file": "vendor/database/Migration.php",
+					"buffer": 3,
+					"file": "vendor/dependencies/faker/faker_test.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 339,
+						"buffer_size": 599,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								331,
-								312
+								179,
+								179
 							]
 						],
 						"settings":
 						{
-							"SL.51.region_keys":
-							[
-							],
+							"auto_name": "<?php",
 							"syntax": "Packages/PHP/PHP.sublime-syntax"
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 207.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 1,
 					"type": "text"
 				},
 				{
-					"buffer": 6,
-					"file": "vendor/migrations/CreateTagTable.php",
+					"buffer": 4,
+					"file": "vendor/dependencies/faker/fzaninotto/faker/src/Faker/Provider/book.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 564,
+						"buffer_size": 309,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								508,
-								508
+								309,
+								309
 							]
 						],
 						"settings":
 						{
-							"SL.52.region_keys":
+							"SL.34.region_keys":
 							[
 							],
-							"syntax": "Packages/PHP/PHP.sublime-syntax",
-							"translate_tabs_to_spaces": false
+							"auto_name": "",
+							"syntax": "Packages/PHP/PHP.sublime-syntax"
 						},
 						"translation.x": 0.0,
-						"translation.y": 69.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
@@ -644,7 +577,7 @@
 	],
 	"incremental_find":
 	{
-		"height": 33.0
+		"height": 32.0
 	},
 	"input":
 	{
@@ -685,7 +618,7 @@
 	"project": "live tracking.sublime-project",
 	"replace":
 	{
-		"height": 62.0
+		"height": 60.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -723,7 +656,7 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 331.0,
+	"side_bar_width": 334.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

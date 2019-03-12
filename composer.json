@@ -1,0 +1,16 @@
+{
+    "name": "leggo/framework",
+    "description": "A MVC based framework for web artist",
+    "require": {
+        "php": ">=5.3.0",
+        "another-vendor/package": "1.*"
+    },
+   "authors": [
+        {
+            "name": "mahendra choudhary",
+            "email": "mail.mahendrachoudhary@yahoo.com",
+            "homepage": "https://thecodestuff.github.io/resume/",
+            "role": "lead Developer"
+        }
+    ]
+}

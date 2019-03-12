@@ -55,7 +55,7 @@ class MakeCommand extends Command
 
         $template = file($this->templatePath) ;
 
-        print_r(str_replace($tags, $replace, $template)) ;
+        #print_r(str_replace($tags, $replace, $template)) ;
         #die("-------------------");
         $file = fopen($path ,'w+') ; 
 
@@ -72,11 +72,17 @@ class MakeCommand extends Command
     public function call_migration_script($command , $className){
         $dir = str_replace('migrate', 'migrations', $command);
 
+        # Fetching root direcotory 
         $vendorDir = dirname(dirname(__FILE__));
         $baseDir = dirname($vendorDir);
         $path = str_replace("\\", "/" , $baseDir) ;
 
+        # className and file name are similar 
         $path .='/'.$dir.'/'.$className.'.php' ;
+
+        # throwing expection if no class found
+        if( !file_exists($path) )
+            throw new \Exception("$className not found...");
 
         #including migration/MigrationClassName file 
         require $path ;

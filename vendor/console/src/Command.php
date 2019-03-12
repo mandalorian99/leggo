@@ -72,7 +72,7 @@ class Command extends SymfonyCommand
 
     protected function makeController(InputInterface $input, OutputInterface $output){
         $output -> writeln([
-            '=======Creating controller==========',
+            '=======Creating controller=======',
         ]);
         Make::createFile(
             $input->getArgument('command') , 
@@ -126,6 +126,7 @@ class Command extends SymfonyCommand
             $input->getArgument('migrationClassName') ,
             $input->getOption('tableName') 
         );
+        $output->writeln(['your migration file is created successfully....']) ;
     }
 
     /**

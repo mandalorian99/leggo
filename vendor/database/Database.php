@@ -1,10 +1,28 @@
 <?php 
+namespace database ;
+use \PDO ;
+
+$vendorDir = dirname(dirname(__FILE__));
+$baseDir = dirname($vendorDir);
+
+$path = str_replace("\\", "/" , $baseDir) ;
+
+if(!file_exists($_SERVER['DOCUMENT_ROOT'].'/live tracking/vendor/config/credentials.php')){
+	# for console uses this file included...
+    require $path.'/vendor/config/credentials.php'  ;	
+}else{
+  #for web server this file included..
+	echo 'this is includedd...' ;
+  require $_SERVER['DOCUMENT_ROOT'].'/live tracking/vendor/config/credentials.php'  ;	
+}
+
 /**
- * Mysql driver : It contain all the common functionalities which help to connect ,disconnect to the 
+ * Mysql driver : It contain all the common functionalities which help to connect * disconnect to the 
  * database . 
  * It will uses PDO extension to query sql statemtments 
  */
-require $_SERVER['DOCUMENT_ROOT'].'/live tracking/vendor/config/credentials.php'  ;
+
+
 class Database{
 	private $host     = DB_HOST		  ;
 	private $dbname   = DB_NAME       ;
@@ -20,13 +38,15 @@ class Database{
 	public function __construct(){
 		# connecting to database
 		$dsn = 'mysql:host='.$this->host.';dbname='.$this->dbname ;
+
 		$options = [
             PDO::ATTR_PERSISTENT => true,  
-            PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION
+            PDO::ATTR_ERRMODE => \PDO::ERRMODE_EXCEPTION
         ];
-
+        echo '---ok all good here';
         # handling any connection error
         try{
+        	echo '---ok all good here';
         	$this->handler = new PDO($dsn , $this->username , $this->passwd , $options) ;
         }catch(PDOException $e){
         	$this->error = $e->getMessage() ;
@@ -95,6 +115,14 @@ class Database{
 	public function resultset(){
 		$this->execute() ;
 		return $this->statement->fetchAll(PDO::FETCH_ASSOC) ;
+	}
+
+	/**
+	 * Test function 
+	 */
+
+	public static function test(){
+		echo "test successfull..." ;
 	}
 }
 ?>
