@@ -21,6 +21,7 @@ abstract class Model{
 	public function __construct(){
 		echo 'parent: creating a db handler for you....';
 		$this->db = new Database() ;
+		
 	}
 }
 

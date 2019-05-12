@@ -7,11 +7,12 @@ require_once __DIR__ . '/vendor/autoload.php';
 use Symfony\Component\Console\Application; 
 use Console\TimeCommand;
 use Console\MakeCommand;
-use Console\MakeModel ;
+use Console\MakeModel      ;
 use Console\MakeController ;
-use Console\MakeView ;
-use Console\MakeMigration ;
-use Console\Migrate ;
+use Console\MakeView       ;
+use Console\MakeMigration  ;
+use Console\Migrate        ;
+use Console\MakeSeeder     ;
 
 /**
 * Author: Chidume Nnamdi <kurtwanger40@gmail.com>
@@ -20,11 +21,12 @@ use Console\Migrate ;
 $app = new Application('Console App', 'v1.0.0');
 
 # Registring all your command 
-$app -> add(new TimeCommand() );
-$app -> add(new MakeController() );
-$app -> add(new MakeModel() ) ;
-$app -> add(new MakeView() ) ;
-$app -> add(new MakeMigration() ) ;
-$app -> add(new Migrate);
+$app -> add(new TimeCommand() )    ;
+$app -> add(new MakeController() ) ;
+$app -> add(new MakeModel() ) 	   ;
+$app -> add(new MakeView() )  	   ;
+$app -> add(new MakeMigration() )  ;
+$app -> add(new Migrate)           ;
+$app -> add(new MakeSeeder)        ;
 
 $app -> run();

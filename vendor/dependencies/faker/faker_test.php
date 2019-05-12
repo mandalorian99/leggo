@@ -24,5 +24,9 @@ if(file_exists( $path.'/dependencies/faker/autoload.php' )){
 $faker = new Faker\Generator() ;
 
 $faker->addProvider(new \Faker\Provider\Book($faker));
-print_r($faker) ;
-?>
+//print_r($faker) ;
+
+
+$book = $faker->title ;
+
+?> 

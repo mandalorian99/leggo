@@ -36,6 +36,7 @@ class Database{
 
 
 	public function __construct(){
+
 		# connecting to database
 		$dsn = 'mysql:host='.$this->host.';dbname='.$this->dbname ;
 
@@ -47,10 +48,11 @@ class Database{
         # handling any connection error
         try{
         	echo '---ok all good here';
-        	$this->handler = new PDO($dsn , $this->username , $this->passwd , $options) ;
+        	$this->handler = new \PDO($dsn , $this->username , $this->passwd , $options) ;
+        	print_r($this->handler) ;
         }catch(PDOException $e){
         	$this->error = $e->getMessage() ;
-        	#echo $this->error ;
+        	echo $this->error ;
         	# code for logging error to file ...
         }
 	}
@@ -122,7 +124,7 @@ class Database{
 	 */
 
 	public static function test(){
-		echo "test successfull..." ;
+		die("*****test sucessfull**************") ;
 	}
 }
 ?>

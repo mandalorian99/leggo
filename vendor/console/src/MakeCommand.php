@@ -96,6 +96,40 @@ class MakeCommand extends Command
         
         
     }
+
+    /**
+     * Create seeder file in vendor/seeder dir 
+     * evoked by Command.php makeSeeder function
+     */
+    public function createSeederFile($command , $filename ,$option){
+        
+        $tags = array(
+            'YOUR_CLASS_NAME' ,
+            'NO_OF_ROWS'
+        );
+
+        $replace = array(
+            $filename  ,
+            $option
+        );
+
+        $dir = explode(':' , $command ) ;
+        
+        $path='C:/xampp/htdocs/live tracking/vendor/'.str_replace('seeder', 'seeder', $dir[1]).'/'.$filename.'.php' ;
+
+        $this->templatePath .=$dir[1].'.txt' ;
+
+        $template = file($this->templatePath) ;
+
+        #print_r(str_replace($tags, $replace, $template)) ;
+        #die("-------------------");
+        $file = fopen($path ,'w+') ; 
+
+        file_put_contents($path , str_replace($tags, $replace, $template)) ;   
+        
+        
+        
+    }
 }
 
 ?>

@@ -7,7 +7,7 @@ use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Output\OutputInterface;
 
 use console\MakeCommand as Make;
-use onsole\MakeMigration;
+use console\MakeMigration;
 use console\database as test;
 require 'test.php';
 /**
@@ -141,6 +141,27 @@ class Command extends SymfonyCommand
             $input->getArgument('migrationClassName') 
         );
         
+    }
+
+
+    /**
+     * Make seeder command function 
+     */
+
+    protected function makeSeeder(InputInterface $input, OutputInterface $output){
+        $output -> writeln([
+            '=======Creating a seeder class=======',
+        ]);
+
+        Make::createSeederFile(
+            $input->getArgument('command') , 
+            $input->getArgument('seederClassName') ,
+            $input->getOption('rows') 
+         ); 
+        
+        // outputs a message without adding a "\n" at the end of the line
+        $output -> write("hello controller test test..");
+
     }
 
 }

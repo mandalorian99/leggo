@@ -16,11 +16,11 @@ Route::get('home' , 'HomeController@index');
 }) ;*/
 Route::get('admin' ,'AdminController@index') ;
 
+Route::get('stops' ,'BusStopController@index') ;
 /*Route::set('stops',function(){
 	BusStopController::view('bus_stop.blade');
 });*/
 
-Route::get('stops' , 'BusStopController@index') ;
 /**
  * for test purpose 
  * Route::set('check',function(){
@@ -33,6 +33,7 @@ Route::get('stops' , 'BusStopController@index') ;
 }) ;*/
 Route::get('viewTest' , 'ViewTestController@index');
 
-//Route::get('myview' , 'ViewTestController@index' ) ;
- 
+
+Route::get('login' , 'LoginController@index') ;
+
 ?>
