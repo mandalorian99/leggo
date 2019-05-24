@@ -43,6 +43,142 @@ If request is not valid a error message is shown to the user else controller is 
 </p>
 
 <h2>Directory Hierarchy of leggo</h2>
-<p>
+<img src="screenshots/dh.PNG" />
 
+<h2>Defining your web route </h2>
+<p> 
+ A web is a URL which evokes a particuallar controller .
+  To define a web route navigate to <em><b> /vendor/route/web.php </b></em> file
+  <br/>
+  
+  ```php
+  Route::get('helloworld/' , 'HelloWorldController@index') ;
+```
+Route::get function accept to parameter .First parameter is the name of your route and the second parameter is the name of controller and the name of function.
+</p>
+
+<h2>Creating a controller for you web route</h2>
+<p>
+Leggo comes with its CLI tool, using this you can create controller file for your  route. 
+To create a controller file use below command. 
+
+```php
+$ > php console make::controller HelloWorldController
+```
+navigate to your <em>/vendor/app/controllers</em> directory you will find that your controller created with some code already added for you to get start with .
+
+Your typicall controller file looks like this 
+
+```php
+<?php 
+class HelloWorldController extends controller{
+	public $view  ;
+	/**
+	 * evoke repective view for this controller and uri
+	 */
+	public function index(){
+		# initilizing view to work with view class
+		$this->view = new HelloWorldView ;
+		$this->view->output() ;
+
+	}
+}
+?>
+```
+Here HelloWorldController class extends to base controller class. Base controller hava a function name view() which evokes the view of particullar route 
+A typicall controller.php file look like this 
+
+```php
+<?php 
+# This is a base controller 
+# Its functionality can be accessed by other controllers 
+
+class controller{
+	public static function view($viewName ){
+		require $_SERVER['DOCUMENT_ROOT'].'/live tracking/vendor/app/view/'.$viewName.'.php' ;
+		
+	}
+
+}
+
+?>
+```
+Now you have created a controller for your web route , its time to create a view for your controller 
+</p>
+
+<h2>Creating a view</h2>
+<p>
+  A view contain a logic which enable user to transport the data fetch by the model from the database to the template. It work in hand with templates which are nothing more than HTML file. 
+To create a view using CLI tool , hit below command in  your console.
+
+```php
+$ > php console make:view HelloWorldView
+```
+A view class template looks like this.
+
+```php
+<?php 
+/**
+ * Class : HelloWorldView
+ * render data with template and output html content
+ */
+
+class HelloWorldView extends View{
+
+ 	public $template_name = 'helloWorld.blade' ;
+ 	public $data ;
+
+ 	public function __construct(){
+ 		// intilizing HelloWorldModel 
+ 		$this->model = new HelloWorldModel ; 		
+ 	}
+
+ 	public function output(){
+ 		$this->data = $this->model->get_test_data() ;
+ 		$this->render($this->template_name , $this->data) ;
+ 	}
+
+}
+
+?>
+```
+In <em><b>$template_name</b></em> we can mention the template which we want to use for the particular view class. You have to create a template name <em><b>helloWorld.blade.html</b></em> in a <em>/templates</em> directory in your root folder . 
+
+<h2>Creating a model</h2>
+<p>
+A model is script which contains the logic to interact with the database table. A single model is associate with a single table in a database.Model uses the data abstraction layer to interact with the database.
+To create a model in leggo using as CLI tool, you just need to hit below command.
+  
+ ```php
+ $ > php console make:model HelloWorldModel  -t helloWorldTable
+ ```
+ A typical  a model look like this 
+ 
+ ```php
+ <?php 
+/**
+ * Class : HelloWorldModel 
+ * This class fetch data from the HelloWorldTable from database
+ */
+
+class HelloWorldModel extends Model{
+	private $table_name ='HelloWorldTable' ;
+
+	public function get_test_data(){
+		// intilizing model instance 
+		parent::__construct() ;
+    
+		$sql = 'SELECT * FROM '.$this->table_name ;
+    
+		$this->db->query($sql) ;
+		$row = $this->db->resultset() ;
+    
+		return $row ;
+	}
+}
+
+?>
+ ```
+
+</p>
 </p>
