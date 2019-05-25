@@ -7,9 +7,21 @@ Table of content
   <li>Installing Leggo</li>
   <li>Architecture of leggo framework</li>
   <li>Working of leggo</li>
-  <li></li>
-  <li></li>
-  <li></li>
+  <li>Directory Hierarchy of leggo</li>
+  <li>Defining your web route</li>
+  <li>Creating a controller for you web route</li>
+  <li>Creating a view</li>
+  <li>Creating a model</li>
+  <li><b>Database:Migrations</b></li>
+  <li>What is database migration</li>
+  <li>Generating a migration </li>
+  <li>Migration structur</li>
+  <li>Running a migration</li>
+  <li><b>Database:Seeders</b></li>
+  <li>what is seeders</li>
+  <li>Writing a seeder</li>
+  <li>Running a seeder</li>
+  <li><b>Framework dependencies</b></li>
 </ul>
 
 <h2>About Leggo</h2>
@@ -179,6 +191,267 @@ class HelloWorldModel extends Model{
 
 ?>
  ```
+A HelloWorldModel inhert functionalities from the base model model.php . Here <b>model.php</b> look like :
+
+```php
+<?php 
+/**
+ * Class :Model 
+ * 
+ * Create a new instance of the Database class.
+ * 
+ * The Model class is an abstract class that creates
+ * a new instance of the Database class, allowing us
+ * to interact with the database without having to create
+ * a new instance in each class.
+ */
+require $_SERVER['DOCUMENT_ROOT'].'/live tracking/vendor/database/Database.php'  ;
+
+use database\Database as Database ;
+
+abstract class Model{
+
+	public $db ;
+
+	public function __construct(){
+		/**
+		 * It creat a database handler oject using it child models can interact with database layer and db
+		 */
+		$this->db = new Database() ;
+		
+	}
+}
+
+?>
+```
+
 
 </p>
+</p>
+
+<h1>[2] Database:Migrations</h1>
+<h2>2.1 What is Migrations ?</h2>
+<p>
+Migrations are like version control for your database, allowing your team to easily modify and share the application's database schema. Migrations are typically paired with leggo’s schema builder to easily build your application's database schema. If you have ever had to tell a teammate to manually add a column to their local database schema, you've faced the problem that database migrations solve.
+</p>
+
+<h2>2.2 Generating a migration</h2>
+<p>
+To create a migration, use the make:migration
+	
+```php
+$ > php console make:migration createTagTable
+```
+
+the new migration will be placed in your <em><b>vendor/migrations</b></em> directory. Each migration file name contains a timestamp which allows leggo to determine the order of the migrations.
+The <em><b>--table</b></em>  options may also be used to indicate the name of the table and whether the migration will be creating a new table. These options pre-fill the generated migration stub file with the specified table.
+</p>
+
+<h2>2.3 Migration Structure</h2>
+<p>
+A migration class contains two methods: up and down. The up method is used to add new tables, columns, or indexes to your database, while the down method should reverse the operations performed by the up method.
+Within both of these methods you may use the leggo schema builder to expressively create and modify tables. To learn about all of the methods available on the <em>Schema</em> builder.
+
+For example this migration creates a tag table .<br/>
+<em><b>creatTagTable.php</b></em>
+```php
+<?php 
+$vendorDir = dirname(dirname(__FILE__));
+$baseDir = dirname($vendorDir);
+
+$path = str_replace("\\", "/" , $baseDir) ;
+$path .='/vendor/database/Migration.php' ;
+
+require $path ;
+
+use database\migration\Migration as Migration ;
+
+//migation template
+class CreateTagTable extends Migration{
+	public $table_name = 'tagsTest' ;
+
+	public function up(){
+		#code goes here...
+		$this->create($this->table_name , '[
+			{
+				"columnName":"id" ,
+				"attributes":["INT(6)" ,"NOT NULL" ,"AUTO_INCREMENT" , "PRIMARY KEY"] 
+			} ,
+
+			{
+				"columnName":"tagName" , 
+				"attributes" :["VARCHAR(20)" ,"NOT NULL"]
+			} ,
+			{
+				"columnName":"testField" ,
+				"attributes":["VARCHAR(50)" ,"NOT NULL" ]
+			}
+		]');
+	}
+
+	public function down(){
+		#code goes here...
+	}
+}
+
+?>
+```
+In up() function we defined the structure of table in JSON format . When you run this migration you will find that a table name 'tagTest' create by leggo in our database . 
+
+Each child migration inherit its properties and functionalites from its base migration class . you can fin base migration file migration.php in <em><b>/vendor/database/ directory</b></em> . 
+Its look like this .<br/> <b>migration.php</b>
+
+```php
+<?php 
+namespace database\migration;
+/**
+ * Class : Migration
+ * This class provide the functionailty to create tables
+ */
+
+# Including database drivers 
+#$path = __DIR__.'\Database.php' ;
+#require $path ;
+
+#use database\Database as DB;
+
+class Migration{
+
+	/**
+	 * This function lets you create table 
+	 */
+	protected function create($tableName , $params){
+		
+		#DB::test() ;
+		#var_dump( json_decode($params) );
+		$feed = json_decode($params) ;
+		$sql = 'CREATE TABLE '.$tableName.'(' ;
+
+		# parsing json feed 
+		foreach($feed as $obj=>$k){
+			$attr = implode(' ', $k->attributes ) ;
+			$sql .= ' '.$k->columnName.' '.$attr.',' ;
+
+		}
+		$sql = substr($sql , 0, -1) ;
+		$sql .=')' ;
+
+		#connecting to database 
+		$conn = new \mysqli("localhost", "root", "" ,"jaipur_transit");
+
+		if ($conn->connect_error) {
+    		die("Connection failed: " . $conn->connect_error);
+		} 
+		
+		if ($conn->query($sql) === TRUE) {
+    		echo "Table $tableName created successfully";
+		} else {
+    		throw new \Exception("oops something happened check your schema again...") ;
+		}
+
+		$conn->close();
+
+	}
+
+	/**
+	 * This function build the sql query 
+	 */
+	public function schema(){
+	}
+
+	
+}
+?>
+```
+</p>
+<h2>2.4 Running a migration </h2>
+<p>
+To run all of your outstanding migrations, execute the migrate php console  command.
+
+```php
+$ > php console migrate createTagTable
+```
+</p>
+
+<h1>[3] Datbase:Seeders</h1>
+<h2>3.1 What is Seeders ?</h2>
+<p>
+Leggo includes a simple method of seeding your database with test data using seed classes. All seed classes are stored in the Vendor/seeder directory. Seed classes may have any name you wish, but probably should follow some sensible convention, such as UsersTableSeeder, etc. By default, a DatabaseSeeder class is defined for you. From this class, you may use the call method to run other seed classes, allowing you to control the seeding order.
+Seeder class extends Database class .It also uses a third party plugin named faker to generate fake data and insert automatically into the database without need to expilicitly inset the rows of data. 
+
+</p>
+
+<h2>3.2 Writing a seeder</h2>
+<p>
+To generate a seeder, execute the <b>make:seeder</b> php console command. All seeders generated by the framework will be placed in the <em><b>vendor/seeder directory</b></em>
+
+```php
+$ > php console make:seeder userTableSeeder
+```
+
+Leggo seeders uses a package called faker to insert a fake data . Instering a fake data automatically will comes handy while developing and testing a application .It eliminates the need to manually insert rows of data into database .
+
+We can define a fake data in a seed file like this.
+
+```php
+<?php 
+
+/**
+ * including Seeder.php
+ */
+$vendorDir = dirname(dirname(__FILE__));
+
+$path = str_replace("\\", "/" , $vendorDir) ;
+echo 'path='.$path ;
+
+if(file_exists( $path.'/database/Seeder.php' )){
+	echo 'file included successfully...' ;
+
+	require $path.'/database/Seeder.php' ;
+}else{
+	echo 'file not exits...' ;
+}
+
+use database\seeder\Seeder as Seeder ;
+
+class UserSeeder extends Seeder{
+
+	public function factory(){
+		
+		/**
+		 * Define your faker data structure 
+		 * column name followed by the type of data you want in it 
+		 */
+		$this->define('test99' , '2' , function(){
+			$faker = $this->faker ;
+			return [
+				'name' =>$faker->name ,
+				'email'=>$faker->email 
+				
+				] ;
+		}) ;
+	}
+
+	public function test1(){
+		echo 'hello test test' ;
+	}
+}
+
+$obj = new UserSeeder ;
+$obj->factory() ;
+?>
+```
+</p>
+
+<h1>[4] Framework Dependencies</h1>
+<p>
+Dependencies : 
+Dependencies are the third party packages or code that is integrated with the framework to extent either the functionality of a framework or to support the inner functionality. 
+Here is the dependencies for the leggo framework are listed : 
+<ul>
+	<li><b>	Fznaninotto/Faker</b>: php liberary to generate fake data </li>
+	<li><b>	Symphony console component</b>: working with CLI console.</li>
+	<li><b>	Pusher </b>: push notification liberary.</li>
+	<li><b>	Data abtractionlayer</b>:  A wrapper for interacting with database.</li>
+</ul>
 </p>
